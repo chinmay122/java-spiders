@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js">
+    <div class="dropdown">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home <i class="fa-chevron-circle-down"></i> </a></li>
+    <body>
+        <h2><u>Operators</u></h2>
+        <h3><u>Unary Operator</u></h3>
+        <p><a href="https://www.unary operator.com" target="_blank" title="unary operator in java">Unary operator</a> s not applicable for <a href="https://www.variables in java.com" target="_blank" title="variables in java">variables</a> but not for <a href="https://www.constants in java.com" target="_blank" title="constants in java">constants</a>.</p>
+        <p>
+            <ul>
+                <li><pre> 
+                                int x=10;
+                                ++10;
+                                System.out.println(x);   ERROR: unexpected error
+                    </pre></li>
+                    <li><pre>   
+                                int x=10;
+                                int y=++(++x);
+                                System.out.println(x);	ERROR: unexpected error
+                    </pre></li>
+            </ul>
+        </p>
+        <p><a href="https://www.unary operatorin java.com" target="_blank" title="unary operator in java"></a>Unary operator is applicable for every <a href="https://www.primtive datatype.in" target="_blank" title="primitive data typr in java">primitive datatype</a> expect <a href="https://www.boolean.com" target="_blank" title="boolean in java">Boolean</a>.</p>
+        <p>
+            <ul>
+                <li><pre>
+                                char ch=’a’;
+                                ch++;
+                                System.out.println(ch);
+                </pre></li>
+                <li><pre>
+                                boolean b=false;
+                                b++;
+                                System.out.println(b);	 ERROR: compile time error saying bad operand type
+                </pre></li>
+                <li><pre>
+                                char ch=’z’;
+                                ch++;
+                                System.out.println(ch); 	 this is going to give you the output.
+                </pre></li>
+            </ul>
+        </p>
+        <h3><u>Equality operator</u>:</h3>
+        <pre>
+            1. System.out.println(10==20);  (false)
+            2. System.out.println('a'==97.0);  (true)
+            3. System.out.println(false==true);  (false)
+            4. System.out.println(false==false);  (true) 
+        </pre>
+        <p>Equality operatoer is applicable for every primitive datatype including<a href="www.boolean in java.com"> boolean</a> and it is also applicable for the non-primitive datatypes.<br>For 2 object reference r1 and r2 r1==r2 returns true, if both are pointng towards same object</p>
+        <img src="image2.JPG">
+        <p>If r1==r2 returns false, if both are pointing towards two different objects</p>
+        <pre> 
+            1.
+            class Test{
+                public static void main(String[]args){
+                    Test t1=new Test();
+                    Test t2=new Test();
+                    Test t3=t1;
+                    System.out.println(t1==t2);  (false)
+                    System.out.println(t2==t3);  (false)
+                    System.out.println(t3==t1);  (true)
+                }
+            }
+            2.
+            class Test{
+                public static void main(String[]args){
+                    Test t1=new Test();
+                    String s=new String();
+                    Object o=new Object();
+                    System.out.println(t1==o);  (false)
+                    System.out.println(s==o);  (false)
+                    System.out.println(s==t);  (compile error)
+                }
+            }
+        </pre>
+        <p>Whenever we are using <a href="www.equality operator.com" target="_blank" title="equality operator in java">equality operator</a> for non-prmitve operator data type,then they are must be have some relation between the argument(either parent to child or child to parent or of same type) otherwse we will get<a href="www.compile time error.in" target="_blank" title="compile time error saying incompatible types"> compile time error</a> sayingn incompatble types. </p>
+        <pre>
+            class Test{
+                public static void man(String[]args){
+                    Test t=new Test();
+                    System.out.println(10==null);  (compile error)
+                    System.out.println(t==null);    (false)
+                    System.out.println(true==null);  (compile error)
+                }
+            }
+        </pre>
+        <p>If we compare any primtive value with null,we will always get compile time error but if we comapre any object reference with null, we alwaysget</p>
+        <h3><u>Bitwise Operator</u></h3>
+        <ul>
+            <li>
+                a & b -- it returns true if both arguments are true. 
+            </li>
+            <li>a | b -- it returns true if any one of the argument is true.</li>
+            <li>a ^ b -- it returns true if both arguments are different.</li>
+        </ul>
+        <p>Exapmples:</p>
+        <pre> 
+            System.out.println(true & false); (false)
+            System.out.println(true | flase);  (true)
+            System.out.println(true ^ false);  (true)
+        </pre>
+        <h3><u>Logical operator</u>  (Short circuit operator)</h3>
+        <pre>
+            a && b  -- b will be executed when the a is true.
+            a || b  -- b will we executed when the a s false.
+        </pre>
+        <h3><u>Assignment Operator</u></h3>
+        <p>Assignment operator is of 3 types</p>
+        <ul>
+            <li><a href="www.simple operator in java" target="_balnk" title="simple operator in java">simple operator</a>.<pre>     int x=10;</pre></li>
+            <li><a href="www.chaimed operator in java" target="_blank" title="chaimed operator in java">chaimed assgnment</a>.<pre>   int x=10,y=20,z=30;</pre></li>
+            <li><a href="www. compound operator in java" target="_blank" title="compound operator in java"> compound operator</a>.<pre>   int x; <br>       x=10;</pre></li>
+        </ul>
+        <p>Exapmples :</p>
+        <pre>
+        1.
+            byte b=10;
+            b++;
+            System.out.println(b);    (11)
+        2.
+            byte b=10;
+            b=b+1;
+            System.out.println(b);   (Error)     (we can add a byte value with a int value and but we can't store it with in the byte datatype)
+        3.
+            byte b=10;
+            b+=1;
+            System.out.println(b);   (11)
+        </pre>
+        <h3><u>Conditonal operator</u></h3>
+        <pre>
+            int x=(10>20)?30:40;
+            System.out.println(x);
+        </pre>
+    </body>
+</html>

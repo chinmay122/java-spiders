@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js">
+    
+    <body>
+        <h2><u>Basics</u></h2>
+        <p><a href="https//www.javawiki.com" target="_black" title="wikipedia">Java</a> is a class-based,<a href="https://www.opps concept n java" target="_blank" title="opps concept"> object-oriented programming language</a> that is designed to have as few implementation dependencies as possible. It is a <a href="https://www.general purpose programing language" target="_blank" title="general purpose programng language" > general-purpose programming language </a>intended to let application developers.</p>
+        <img src="image1.JPG">
+        <p>Whatever the java program we write that is known as source code and this source code is not understand by our system.</p>
+        <p>
+            To make our code understandable to our system the java provides two software:
+            <ul>
+                <li><a href="https://www.compiler in java.com" target="_blank" title="compiler in java">compiler</a></li>
+                <li><a href="https://www.java virtual machine" target="_blank" title="java virtual machine">jvm</a></li>(java vrtual machine)
+            </ul>
+        </p>
+        <p>Compiler check the syntax of the program and generate bytecode.</p>
+        <p>Bytecode is not the machine level language and it is responsible for java to become platform independent.</p>
+        <p>Jvm converts the bytecode to the machine level language.</p>
+        <p>Java
+            <ul>
+                <li><a href="https://www.class in java.com" target="_blank" title="class in java">class</a></li>
+                <li><a href="https://www.method in java.com" target="_blank" title="method in java">method</a></li>
+                <li><a href="https://www.varable in javc.vom" target="_blank" title="variables in java">variable</a></li>
+                <li><a href="https://www.objects in java.com" target="_blank" title="object in java">Object</a></li>
+            </ul>
+        </p>
+        
+        <h2><u>Variables</u></h2>
+        <p>It is the name of a memory which is used to store the values.
+            <ul>
+                <li><a href="https://www.non static variable.com" target="_balnk" title="non-static variable in java">non-static variable</a></li>
+                <li><a href="https://www.static variable.com" target="_blank" title="static variable in java">Static variable</a></li>
+                <li><a href="https://www.local variable.com" target="_blank" title="local variabl in java">local variable</a></li>
+            </ul>
+        </p>
+        <h2><u>Non-statc variable</u></h2>
+        <p>The value of the variable which varies from object to object, and it is declared inside the class but outside the method without the static keyword.</p>
+        <pre>
+            class Test{
+                int x=20;
+                public static void main(String[]args){
+                    System.out.println("hello world");
+                    Test t=new Test();
+                    y=t.x();
+                    System.out.println(y);
+                }
+            }
+        </pre>
+        <p>the non-static variable accessed with the help of object reference<pre>
+            example :- Test t=new Test();</pre>Stored in the heap memory.</p>
+        <p>created at the time of <a href="www.objectcreation in java.in" target="_blank" title="object creation in java">object creation</a>,for every object thrie is a separate copy of the non-static variable.</p>
+        <h2><u>Static variable</u></h2>
+        <p>The value of the variable which is not varies from object to object, and this is alos declared inside the class and outside the main method with a static keyword</p>
+        <pre>
+            class Test{
+                static int x=10;
+                public static void main(Strng[]args){
+                    System.out.println("hello world");
+                    y=Test.x();
+                    System.out.println(y);
+                }
+            }
+        </pre>
+        <p>static variable accessed with the help of class name or we can directly call the variable orwe can aslo call with the help of object reference but this is not recomemded<pre>
+            Test.x();</pre></p>
+        <p>created at the time of <a href="www. classloading in java.com">class loadng</a> and store in the<a href="www.method area in java.com"> methos area</a> or <a href="www.class area in java.com">class area,</a> their is only one copy of the static variable and stored by each and every object</p>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js">
+    <div class="dropdown">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home <i class="fa-chevron-circle-down"></i> </a></li>
+    <body>
+        <h2><u>Methods</u></h2>
+        Methods in java are used for to write business logic and application logic.<br>
+        Methods name must start withlower case when method name contains more than one word then every inner word should start with uppercase.<br>
+        Example :
+        <pre>
+            main()                                  toLowerCase();
+            append()                                toUpperCase();
+        </pre>
+        <p>every method contains two parts :<br>
+                1.declaration<br>
+                2.implementation</p>
+        <img src="image3.JPG">
+        <p>Their are two types of Methods:<br>1.static<br>2.non-static</p>
+        <pre>
+            public static void m1(){
+                      //  this is a static method , the method which has a static keyword inside the method is called static method.
+            }
+
+            public void m1(){
+                      //  the method without static keywordis called non-static method.
+            }
+        </pre>
+        <h3><u>Method calling</u></h3>
+        calling a method inside the main method is called method calling.<br>
+        We can write any number of methods inside the class.
+        <pre>
+            class first {
+	            public static void main(String[] args) {
+		            System.out.println("hi");
+		            m1();				//method calling m1()inside the main method
+		            System.out.println("bye);	}
+	            }
+                public static void m1(){
+	                System.out.println("hi");  //secondary method
+	                System.out.println("bye");
+	            }
+            }
+        </pre>
+        We can call static method inside a static area directly.<br>
+        We can't call a non-static method inside a static area directly so for that we have to create a object reference.
+        <pre>
+            first f=new first();  // with the help of this we can access the non-static method inside a static area directly.
+        </pre>
+        We can call a non-static method inside a non-static area directly.
+        <h5><u>Rules for the method calling</u></h5>
+        <table border="1">
+            <ul>
+                <dt><li>inside non-static</li></dt>
+                    <dd>We can call static and non-static directly</dd>
+                <dt><li>inside static</li></dt>
+                    <dd>we can call a static directly but calling non-staic with the help of object reference </dd> 
+            </ul>   
+        </table>
+        <h3><u>Method calling with the help of argument</u></h3>
+        <pre>
+            class first{
+	            public static void man(String[]args){
+		            first t=new first();			// creating object reference
+		            t.m1(10);     //calling by the help of object agrument
+	            }
+	            public void m1(int i){
+		            System.out.println("hi");
+		            m2(10.5);			
+		            System.out.println(i);		// it will print the value of i automatically
+	            }
+	            public void m2(double d){
+		            System.out.println("hi1");
+		            System.out.println(d);   //it will print the value of d
+	            }
+            }
+        </pre>
+        
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js">
+    <div class="dropdown">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home <i class="fa-chevron-circle-down"></i> </a></li>
+
+    <body>
+        <h2><u>Flow control</u></h2>
+        <p>The order in which all the statement will be executed at the run time is known as <a href="www.flow control in java" target="_blank" title="flow control in java">flow control</a>.</p>
+        (if....else....) <u>sytnax</u>
+        <pre>
+            if(condton){
+                statement 1;
+            }else{
+                statement 2;
+            }
+        </pre>
+        <p>if the conditon s true statement 1 will be executed otherwse the statement will executed <br>The condition can be a boolean type otherwise it will shows a compile time error,saying incompatible error, and the statement must not be of declaretive type</p>
+        Examples:
+        <pre>
+            int x=10;
+            if(x){
+                System.out.println("hi");               this will gives you an error
+            }else{
+                System.out.println("bye");
+            }
+
+            int x=10;
+            if(x=20){
+                System.out.println("hi";);              this will also gives you an error
+            }else{
+                System.out.println("bye");
+            }
+
+            int x=10;
+            if(x==10){
+                System.out.println("hi";);              this will gves you an output
+            }else{
+                System.out.println("bye");
+            }
+        </pre>
+        <p>Else part is optional, the code should run otherwse it will goes out of the condition and print nothing. <br>Curly brackets are optional but after if statement only one statement is allowed but that can't be of <a href="www. declarative typein java.in" target="_blank">declarative type</a>(variable ecalration not allowed).</p>
+        <pre>
+            if (true);
+            int x=10;                   declarative type error
+        </pre>
+        <p>Declaratve type is the type which can be declared after the if condition.</p>
+        <pre>
+            int x;
+            if (true)
+            x=10;                       it will run the code and shows the output
+        </pre>
+        Examples:
+        <pre>
+            if(true)
+            System.out.println("hi");
+            System.out.prntln("bye");                   prnt all the statement
+            System.out.println("goes");
+        </pre>
+        <pre>
+            if(false)
+            System.out.println("hi");
+            System.out.prntln("bye");                   print last 2 statements
+            System.out.println("goes");
+        </pre>
+        <h2><u>Switch Case</u></h2>
+        <u>syntax</u>
+        <pre>
+            <a href="www.switch condition in java" target="_blank" title="switch case in java">switch</a>(condition){
+                case 1:
+                statement1;
+                break;
+                case 2:
+                statement2;
+                break;
+                case 3:
+                statement3;
+                break;
+            }
+        </pre>
+        <p>The syntax is compile but not shows an output because both case and default are optional in java.An anti-switch case s a valid java program.</p>
+        <pre>
+            int x=10;
+            switch(x){
+                
+            }
+        </pre>
+        <p>Independent statement nsde the statement is not allowed, it must be inside some case or in default case.</p>
+        <pre>
+            int x=20;
+            switch (x){
+                System.out.println("hi");
+            }
+        </pre>
+        <p>Every where in java Curly crackets are optional but not in switch case, we must have a curly brackets to perform switch case,Case value must be a constant expression not a variable.</p>
+        <pre>
+            int x=10;
+            int y=20;
+            switch(x){
+                case 10:
+                System.out.println(10);
+                break;
+                case y:                             Error: constant is required
+                System.out.println(2);              
+                break;
+                default:
+                System.out.println("default");
+                break;
+            }
+        </pre>
+        <pre>
+            switch(x){
+                case 10+20*40:                      This is valid because it is a constant after the addition and the multiplication 
+                System.out.println("hi");
+                break;
+            }
+        </pre>
+        <p>Character is acceptable in switch case because t will call the ascii value of this character. <br>"final" before any variable means we can't change the value of the <a href="www.variable is java.com" target="_blank">variable</a>.</p>
+        <pre>final int y=10;</pre>
+        <p>If we declare any variable as final it means it act like a <a href="www.constant in java.com" target="_blank">constant</a>. </p>
+        <pre>
+            int x=97;
+            final int y=98;
+            switch(x){
+                case 97:
+                statement 1;                    it will compile the code because of the final declaration of the y,so it act like a constant.
+                break;
+                case y:
+                statement 2;
+                break;
+            }
+        </pre>
+        <p>Case value must be come inside the range of the switch condition value, otherwise it will give you an error.</p>
+        <pre>
+            byte b=10;
+            switch(b){
+                case 1000:                      Error : the value must come inside the range.
+                System.out.println(1000);
+                break;
+            }
+
+
+            byte b=10;
+            switch(b+1){                        it will not shows any error because the condition is now a integer type.
+                case 1000:
+                System.out.println(1000);
+                break;
+            }
+        </pre>
+        <p> Duplicate case value is not allowed in swtch case.</p>
+        <pre>
+            int x=97;
+            switch(x){
+                case 97:
+                System.out.println(97);
+                break;
+                case 'a':                        Error : Duplicate case level error
+                System.out.println(99);
+                break;
+            }
+        </pre>
+        <h2><u>Fall back inside switch</u></h2>
+        <p>Whenever a case matches from that case unwards all the statement will be exected untill break or end of the switch. this is known as fall back inside switch</p>
+        <pre>
+            switch(x){
+                case 0:
+                System.out.println(0);
+                case 1:
+                System.out.println(1);
+                break;
+                case 2:
+                System.out.println(2);
+                default:
+                System.out.println("default");
+
+            }
+        </pre>
+    </body>
+    
+</html>

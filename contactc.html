@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js">
+    <div class="dropdown">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home <i class="fa-chevron-circle-down"></i> </a></li>
+    <body>
+        <h2><u>Loop</u></h2>
+        <h3><u>While loop</u></h3>
+        Syntax:
+        <pre> 
+            while(condition){
+                statement;
+            }
+        </pre>
+        <p>The argument through the while statement should be of boolean type.<br> If we are trying to give any other type then we wll get compile time error saying in compatible types.</p>
+        <pre>
+        1.
+            int x=10;                                                           3.        int x=10;
+            while(x){                                                                   while(x=20){
+                System.out.println("hi");                                                   System.out.println("bye");
+            }                                                                           }
+            this will gives you an compile time error.                                  this also gives you an error saying compile time error.                                                                            }
+        2.
+            int x=10;
+            while(x==10{
+                System.out.println("hi");                    this will run and gives us the output.           
+            }                                       
+        </pre>
+        <p>Curly brackets are optional in while loop.</p>
+        <pre>
+        1.
+            while(true){
+                System.out.println("hi");
+            }
+            System.out.println("bye");                          this part will gives an error saying unreachable statement.
+        2.
+            while(false){
+                System.out.println("hi");                       this part will gives an error saying unreachable statement.
+            }
+            System.out.println("bye");
+        </pre>
+        <pre>
+            int x=10;
+            int y=20;
+            while(x < y){
+                System.out.println("hi");                       It will shows the output as "hi" infinite times because in condition variable is present, so the compiler thought that the value of the variable may change
+            }
+            System.out.println("bye");
+        </pre>
+        <pre>
+        1.
+            int x=10;
+            final int y=20;
+            System.out.prntln(x);                               it means it call the value of the x
+        2.
+            System.out.println(y);                              it means System.out.println(20);
+        </pre>
+        <p>
+            Final variable is replaced with it's value after compliation.
+        </p>
+        <h2><u>Do...While...loop</u></h2>
+        <p>When ever we want to execute the statement at least once then we should go for do whle loop.</p>
+        Syntax
+        <pre>
+            do{
+                statement;
+            }while(condition);
+        </pre>
+        The argument to the do whle loop statement should be of boolean type.
+        <pre>
+            do                                                  do;
+            while(conditon);                                    while(condition);
+            (ERROR)                                                 (Gives you the output)
+        </pre> 
+        <p>No declaration type item s not allowed insde the do whle loop.</p>
+        <pre>
+            do{
+                System.out.prntln("hi");
+            }while(true);
+            System.out.println("bye");                      this part will gives you an error:saying un reachable statement
+        </pre>
+        <h2><u>for...loop...</u></h2>
+        <p>when we know the exact number of iteration then we should go for the "for...loop..."</p>
+        Syntax
+        <pre>
+            for(initializaton;condition;increment/decrement){
+                statement;
+            }
+        </pre>
+        <h3>1.Intialization</h3>
+        <p>The initialization part will be executed onlu once in the loop.</p>
+        <p>We can declare any number of variable in initialization part but we have to declare the variable of some type</p>
+        Examples
+        <pre>
+            int i=0,j=0,k=0;
+        </pre>
+        <pre>
+            int i=0;                                            this ell gives you an output.there are no mandatory that you have to initialize the variable at onlu inside the for loop.
+            for(System.out.println("hi") ; i < 10 ; i++){
+                System.out.println("bye";)
+            }
+        </pre>
+        <p>We can write statement in the intializaton part.</p>
+        <h3>2.Condition part</h3>
+        The condition part is not mandatory in for loop, but bydefault it shows the conditon always true.
+        <pre>
+            for(int i=0; ;i++){
+                System.out.println("hi");
+            }           int output it will run the code infinite times.
+        </pre>
+        <h3>3.Increment and Decrement part</h3>
+        <pre>
+            for (int i=0;i< 10; System.out.println("bye")){
+                System.out.println("hi");
+                i++;
+            }
+        </pre>
+        All the three parts are optional in for loop and independent of each other.
+    </body>
+</html>
